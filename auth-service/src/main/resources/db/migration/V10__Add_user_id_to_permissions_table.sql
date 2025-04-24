@@ -1,0 +1,3 @@
+ALTER TABLE permissions
+ADD COLUMN user_id BIGINT UNSIGNED DEFAULT NULL,
+ADD CONSTRAINT fk_permissions_user_id FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL;
